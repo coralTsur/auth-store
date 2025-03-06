@@ -23,7 +23,7 @@ mongoose.connect('mongodb://localhost/store', { useNewUrlParser: true, useUnifie
   .then(() => {
     // Insert a product after connecting to the database
     const newProduct = new Product({
-      name: "Product 3",  // this field is required
+      name: "Product 8",  // this field is required
       price: 10.949,       // this field is required
       description: "A great product",
       category: "Electronics"
@@ -33,7 +33,7 @@ mongoose.connect('mongodb://localhost/store', { useNewUrlParser: true, useUnifie
   })
   .then(() => console.log("Product saved"))
   .catch(err => console.error("Error saving product:", err))
-  .finally(() => mongoose.disconnect()); // Close the connection once done
+  //.finally(() => mongoose.disconnect()); // Close the connection once done
 
 // הוספת הנתיבים
 app.use('/products', productRoutes); // נתיבים של מוצרים
