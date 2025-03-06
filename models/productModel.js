@@ -6,8 +6,8 @@ const productSchema = new mongoose.Schema({
     required: true
   },
   price: {
-    type: Number
-
+    type: Number,
+    required: true
   },
   description: String,
   category: String
@@ -16,3 +16,8 @@ const productSchema = new mongoose.Schema({
 const Product = mongoose.model('Product', productSchema);
 
 module.exports = Product;
+
+
+
+
+
